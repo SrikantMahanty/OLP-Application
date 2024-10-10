@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #F9F8F4; /* Light background color */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a73e8; /* Blue background for nav */
+    padding: 10px 0;
+}
+
+.nav .crossIcon_div {
+    margin-right: 55px;
+}
+
+.nav img {
+    width: 70px;
+    margin: 25px;
+}
+
+.container {
+    padding: 15px;
+}
+
+h3 {
+    text-align: center;
+    color: #fff; /* White text color */
+    background-color: #FFBF00; /* Gold background for heading */
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px; /* Rounded corners for heading */
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #dddddd; /* Light border color */
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey for even rows */
+}
+
+tr:hover {
+    background-color: #ffeb3b; /* Highlight effect on hover */
+    color: #222; /* Darker text color on hover */
+}
+
+th {
+    background-color: #1a73e8; /* Blue background for header cells */
+    color: white; /* White text for header cells */
+}
+
+td:hover {
+    background-color: #ffe57f; /* Highlight effect for table cells on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}

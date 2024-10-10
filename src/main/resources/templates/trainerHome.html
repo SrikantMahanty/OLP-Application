@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/trainerHome.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+    <!--fab-icon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <title>LearnSphere|TainerHome</title>
+  </head>
+  <body>
+  <header>
+    <nav>
+        <a href="#hero"><img src="/img/logo.png" alt=""></a>
+        <ul class="navbar" >
+            <li><a type="active" href="#hero">Home</a></li>
+            <li><a href="#about_us_id">About Us</a></li>
+            <li><a href="#contact_us_id">Contact</a></li>
+        </ul>
+        <ul class="navbar_res">
+            <li><a href="/">Log out</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </nav>
+  </header>
+  <section class="hero" id="hero">
+  <p th:text="${alert_message}" id="alert_message_phone"></p>
+    <div class="hero-content">
+      <h1 class="first-h1">Welcome to <strong><span style="color: yellow;">Learn</span><span style="color: #333">Sphere</span></strong></h1>
+      <h1><span>Hello,</span><span class="name" th:text="${success}"></span></h1>
+	    <div class="trainer_Btn">
+	        <a href="/createCourse"><button class="btn-1">Add Course</button></a>
+	        <a href="/addLesson"><button class="btn-2">Add Lesson</button></a>
+	        <a href="/showCourses"><button class="btn-3">View Courses</button></a>
+
+	    </div>
+	    <p th:text="${alert_message}" id="alert_message"></p>
+
+    </div>
+  </section>
+
+  <section class="about_us" id="about_us_id">
+    <h1>About Us</h1>
+    <div class="about_us_container">
+        <div class="about_us_img">
+            <img src="/img/girl.png" alt="">
+        </div>
+        <div class="about_us_para">
+            <p>learnSphere is a leading e-learning platform committed to
+                providing high-quality online education to learners worldwide.
+                We believe that education is the key to unlocking one's potential and achieving personal and professional growth.
+                With our innovative and user-friendly platform, we strive to make learning accessible,
+                engaging, and convenient for everyone.</p>
+        </div>
+    </div>
+
+  </section>
+  <section class="mission">
+    <h1>Our Mission</h1>
+    <div class="mission_container">
+        <div class="mission_para">
+            <p>At learnSphere, our mission is to empower learners by offering a diverse range of courses and resources that cater to various interests, skill levels, and learning styles. We aim to foster a lifelong love for learning and enable individuals to acquire new knowledge and skills that will positively impact their lives.</p>
+        </div>
+        <div class="mission_img">
+            <img src="/img/mission.png" alt="">
+        </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact_us" id="contact_us_id">
+    <h1>Contact Us</h1>
+    <div class="contact_container">
+        <div class="contact">
+            <div class="logobox">
+                <div class="location logo">
+                  <img src="/img/location.png" alt="" />
+                  <p id="p1">Odisha</p>
+                </div>
+                <div class="phone logo">
+                  <img src="/img/phone.png" alt="" />
+                  <p id="p2">6370431108</p>
+                </div>
+                <div class="mail logo">
+                  <img src="/img/mail.png" alt="" />
+                  <p id="p3">srikantmahanty@gmail.com</p>
+                </div>
+                <div class="whatapp logo">
+                  <img src="/img/whatsapp.png" alt="" />
+                  <p id="p4">6370431108</p>
+                </div>
+              </div>
+        </div>
+
+        <div class="get_in_touch">
+            <h3>Get in Touch</h3>
+            <form action="/contactUs" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023-2025 LearnSphere. All rights reserved.</p>
+  </footer>
+  <script type="text/javascript">
+     setTimeout(() => {
+	 let get = document.getElementById('alert_message');
+	 get.style.display = 'none';
+	 }, 8000);
+
+     setTimeout(() => {
+    	 let get = document.getElementById('alert_message_phone');
+    	 get.style.display = 'none';
+    	 }, 8000);
+</script>
+
+  <script src="/script/script.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>

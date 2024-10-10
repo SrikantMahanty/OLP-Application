@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere|Login now</title>
+<link rel="stylesheet" href="/css/login.css">
+
+<!--fab-icon -->
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+    <div class="nav">
+       <div class="logo_div">
+         <a href="/"><img alt="" src="/img/logo.png"></a>
+       </div>
+        <div class="crossIcon_div">
+         <a href="/" style='font-size:30px;'>&#10006;</a>
+       </div>    
+    </div>
+    
+	<div class="container">
+		<h3>Log in</h3>
+		<form action="/validate" method="post">
+			<input type="email" name="email" id="email" required placeholder="Email"><br> 			
+			<input type="password" name="password" id="pass" placeholder="Password"><br> 			
+			<a class="forgot" href="#">Forgot password</a>
+			<p th:text="${error}" style="color: red "></p> 			
+			<input type="submit" id="button" value="Login">		
+		</form>
+		<div class="login">
+			<p>
+				Don't have an account? <a href="/register">signup now</a>
+			</p>
+		</div>
+	</div>
+	
+</body>
+
+</html>

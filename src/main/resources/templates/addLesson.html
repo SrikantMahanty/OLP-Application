@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSphere|Add lesson</title>
+<link rel="stylesheet" href="/css/addLesson.css">
+
+<!--fab-icon -->
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+    <div class="nav">
+       <div class="logo_div">
+         <a href="/"><img alt="" src="/img/logo.png"></a>
+       </div>
+        <div class="crossIcon_div">
+         <a onclick="goBack()" style='font-size:30px; cursor: pointer'>&#10006;</a>
+       </div>    
+    </div>
+    
+	<div class="container">
+		<h3>Lesson</h3>
+		<form action="/lesson" method="post">	    
+			<input type="text" name="courseId" id="courseId" required placeholder="Course ID"><br>
+			<input type="text" name="lessonId" id="lessonId" required placeholder="Lesson ID"><br>
+			<p th:text="${error}" id="alert"></p>	 					
+			<input type="text" name="lessonName" id="lessonName" required placeholder="Lesson Name"><br>
+			<input type="text" name="topics" id="topics" required placeholder="Lesson Topics"><br>	 					
+			<input type="text" name="link" id="link" required placeholder="Video Link"><br>	
+			<input type="submit" id="button" value="Add Lesson">		
+		</form>
+		
+	</div>
+	
+	<script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+	
+</body>
+
+</html>

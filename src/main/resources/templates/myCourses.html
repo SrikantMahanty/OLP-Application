@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSphere|My courses</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!--google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+    <!--fab-icon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> 
+      
+ <link rel="stylesheet" type="text/css" href="/css/myCourse.css">
+</head>
+<body>
+    <nav>
+        <ul style="margin-bottom: 0px">
+            <li><img src="/img/logo.png" alt=""></li>
+            <li>Dashboard</li>
+            <li style="margin-left: 25vw"><a href="/">Logout</a></li>
+        </ul>
+    </nav>
+    <section class="course">
+        <div class="user">
+            <img src="/img/icons8-user-100.png" alt="">
+            <p style="margin-bottom: 0px;"><span th:text="${user.firstName}"></span><span th:text="${user.lastName}"></span></p>
+        </div>
+        <h1 >My courses</h1>
+        <h5><img src="/img/icons8-list-64.png" alt=""> Course Enrolments</h5>
+        <div class="back_container">
+            <small th:text="${courseSet.size()}"></small>
+            <button class="back_btn" onclick="goBack()">↩Back </button>
+        </div><hr>
+        <div class="row row-cols-1 row-cols-md-3 g-4  main-card_container " >
+            <div class="col" th:each="courseSet: ${courseSet}">
+              <a class="card_link" th:href="@{/user/course/{courseId}(courseId=${courseSet.courseId})}">
+                 <div class="card">
+                	<img th:src="${courseSet.courseImage}" class="card-img-top " alt="...">
+                    <div class="card-body">
+                    	<h5 class="card-title" th:text="${courseSet.courseName}"></h5>
+                    	<p class="card-text" th:text="${courseSet.courseDescription}" ></p>
+                 	</div>
+              	 </div>
+              </a>
+            </div>   
+          </div>
+    </section>
+    <footer>
+    <p>&copy; 2023-2025 LearnSphere. All rights reserved.</p>
+  </footer>
+  <!--for back button  -->
+  <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>

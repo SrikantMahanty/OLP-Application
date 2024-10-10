@@ -1,0 +1,48 @@
+@charset "UTF-8";
+body{
+	background-color:#f4f4f4;
+	
+	
+}
+#success-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px; 
+    border-radius: 5px;
+    border:2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 25rem;
+    margin: 175px auto;
+}
+
+#tick-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+.btn_container{
+    margin-top: 20px;
+}
+.btn_container a{
+    background-color: transparent;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 7px;
+    margin: 8px;
+}
+.btn_container a:hover{
+    background-color: #4caf50;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    
+}

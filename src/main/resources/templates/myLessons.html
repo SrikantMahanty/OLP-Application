@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSphere|My lessons</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!--google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+    <!--fab-icon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">   
+      
+ <link rel="stylesheet" type="text/css" href="/css/myLessons.css">
+</head>
+<style> 
+ 
+</style>
+<body>
+    <nav>
+        <ul style="margin-bottom: 0px">
+            <li><img src="/img/logo.png" alt=""></li>
+            <li>Dashboard</li>
+            <li style="margin-left: 25vw"><a href="/">Logout</a></li>
+        </ul>
+    </nav>
+    <section class="lessons">
+        <div class="user">
+            <img src="/img/icons8-user-100.png" alt="">
+            <p style="margin-bottom: 0px;"><span th:text="${user.firstName}"></span><span th:text="${user.lastName}"></span></p>
+        </div>
+        <h1 >My courses</h1>
+        <h5><img src="/img/icons8-list-64.png" alt=""> Course Enrolments</h5>
+        <div class="back_container">
+            <small th:text="${course.courseName}" ></small>
+            <button class="back_btn" onclick="goBack()">↩Back</button>
+        </div>
+        <p style="margin-bottom: 0px">total lecture.<span th:text="${lesson.size()}">0</span></p>
+        <hr >
+        
+        <table class="table table-borderless">
+        <tr>
+            <th scope="col" class="col-1">Lectures</th>
+            <th scope="col" class="col-1" >Topics</th>
+            <th scope="col">Watch now</th>
+        </tr>
+        <tr th:each="lesson: ${lesson}">
+            <td class="tv_img col-1"><img src="/img/icons8-tv-show-30.png" alt="" ><span th:text="${lesson.lessonName}"></span></td>
+            <td class="col-1" th:text="${lesson.topics}"></td>
+            <td class="view_img"><a   th:href="@{/user/course/lessons/{lessonId}(lessonId=${lesson.lessonId})}" ><img src="/img/icons8-view-24.png" alt=""></a></td>
+          </tr>
+        
+    </table>
+        
+    </section>
+    <footer>
+    <p>&copy; 2024-2025 LearnSphere. All rights reserved.</p>
+  </footer>
+  <!--for back button  -->
+  <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>

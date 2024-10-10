@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #e8f0ff; /* Light blue background */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a73e8; /* Blue nav bar */
+    padding: 15px 0;
+}
+
+.nav .crossIcon_div {
+    margin-right: 55px;
+}
+
+.nav img {
+    width: 70px;
+    margin: 25px;
+}
+
+h3 {
+    padding-top: 65px;
+    margin-bottom: 30px;
+    text-align: start;
+    padding-left: 40px;
+    color: #222; /* Text color for headings */
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    margin-top: 5%;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    color: #222; /* Text color for container */
+    outline: none;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border: none;
+    background: #eeeeee; /* Light grey for input background */
+    margin: 15px 10px;
+    font-size: 17px;
+}
+
+#button {
+    margin-bottom: 35px;
+    background-color: #ff5722; /* Deep orange for button */
+    color: white;
+    border-radius: 20px;
+    width: 40%;
+    padding: 10px 0;
+    border: 2px solid #ff5722; /* Matching border color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#button:hover {
+    background-color: white; /* White on hover */
+    color: #ff5722; /* Deep orange text on hover */
+    border: 2px solid #ff5722; /* Matching border color */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90vw; /* Full width for small screens */
+    }
+}
+
+#alert {
+    color: red; /* Alert text color */
+    text-align: left;
+    padding-left: 40px;
+}

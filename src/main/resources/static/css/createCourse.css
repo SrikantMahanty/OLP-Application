@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+  background-color: #F9F8F4;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+.nav .crossIcon_div{
+	margin-right: 55px;
+}
+.nav img{
+	width: 70px;
+	margin: 25px;
+}
+h3{
+    padding-top: 65px;
+    margin-bottom:30px ;
+    text-align: start;
+    padding-left: 40px;
+}
+.container {
+    width: 400px;
+    margin: auto;
+    margin-top:5%;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    color: #3aaf9f;
+    outline: none;
+    border: 1px solid #e3e3e3;
+}
+input {
+    width: 80%;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border: none;
+    background: #eeeeee;
+    margin: 15px 10px;
+    font-size: 17px;
+}
+
+
+#button{
+	margin-bottom:35px;
+    background-color: #3aaf9f;
+    color: white;
+    border-radius: 20px;
+    width: 40%;
+    padding-left: 10px;
+    border: 2px solid #3aaf9f;
+}
+
+#button:hover{
+    background-color: white;
+    color:#3aaf9f ;
+    border: 2px solid #3aaf9f;
+    
+}
+
+@media screen and (max-width: 768px) {
+    /* Your responsive styles for small screens here */
+    .container {
+    width: 90vw;
+    
+   }
+}
+
+#alert{
+	color:red;
+	text-align:left;
+	padding-left: 40px;
+}

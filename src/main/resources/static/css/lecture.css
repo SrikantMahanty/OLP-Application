@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+h1, h2,p, ul, li {
+	padding: 0;
+}
+h3{
+	margin:0px
+}
+body {
+	background-color: rgb(242, 242, 242);
+}
+
+nav {
+	background-color: #4caf50;
+	color: #fff;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+	font-weight:400;
+	font-family: "Baloo Bhai 2", cursive;
+}
+
+ul {
+	padding-left: 7%;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+}
+
+li {
+	color: white;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+
+li img {
+	width: 70px;
+}
+
+/* Main content styling */
+main {
+	padding: 2% 15%;
+}
+main .user{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+main .user img{
+    width: 40px;    
+}
+.title_main_container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.course_title {
+	margin-bottom: 10px;
+	font-family: "Baloo Bhai 2", cursive;
+}
+
+.back_btn {
+	background: #4caf50;
+	color: white;
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 4px;
+	border: 2px solid white;
+	cursor: pointer;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+	font-family: "Baloo Bhai 2", cursive;
+}
+
+.back_btn:hover {
+	background: #333;
+}
+
+/* Video container */
+.video_maincontainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 25px;
+}
+
+.video-container {
+	margin-bottom: 2rem;
+}
+
+.introduction_div {
+	width: 40%;
+	padding-left: 80px;
+	font-family: "Baloo Bhai 2", cursive;
+}
+
+/* Comment section */
+.comment-section {
+	border-top: 1px solid #ccc;
+	padding-top: 2rem;
+}
+.comment-section h1,h2 {
+	font-family: "Baloo Bhai 2", cursive;
+}
+/* Comments list */
+.comments-list {
+	display:block;
+	list-style: none;
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.comment {
+	font-family: "Bree Serif", serif;
+	padding: 1rem 2rem;
+	
+	margin: 1rem 2rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	color: rgb(33, 37, 41);
+	background-color: rgb(242, 242, 242);
+}
+.comment small{
+	font-size: 13px;
+}
+.comment img{
+	width: 35px;
+	
+}
+.comment-text {
+	margin: 0;
+	padding-left: 40px;
+}
+
+.comment-date {
+	display: block;
+	font-size: 0.8rem;
+	color: #777;
+	margin-top: 0.1rem;
+	padding-left: 40px;
+}
+
+/* Comment form */
+.comment-form {
+	margin-top: 2rem;
+	
+}
+.input_border{
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.email_input{
+	padding: 1rem;
+	width: 100%;	
+	border: none;
+}
+.comment-form textarea {
+	width: 100%;
+	padding: 1rem;
+	border:none;
+	resize: vertical;
+	
+}
+
+.comment-form button {
+	margin-top:10px;
+	background-color: #333;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	text-decoration: none;
+	border: 2px solid white;
+	cursor: pointer;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+	font-family: "Baloo Bhai 2", cursive;
+}
+.comment-form button:hover{
+	background-color: #4caf50;
+	
+}
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 12px;
+}
+
+footer p {
+	margin-bottom: 0px;
+}
+
+/* Responsive styles */
+@media ( max-width : 768px) {
+	/* Adjust padding for smaller screens */
+	main {
+		padding: 1rem;
+	}
+
+	/* Make the video container responsive */
+	.video-container {
+		overflow: hidden;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio for videos */
+		position: relative;
+		margin-bottom: 0rem;
+	}
+	.video-container iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.introduction_div {
+		width: 100%;
+		padding: 0px;
+	}
+}

@@ -1,0 +1,155 @@
+*{
+     box-sizing: border-box;
+     padding: 0px;
+     margin: 0px;
+     
+}
+body{
+	background-color: rgb(242, 242, 242);
+}
+nav {
+	background-color: #4caf50;
+	color: #fff;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+	font-weight:400;
+	font-family: "Baloo Bhai 2", cursive;
+}
+
+ul {
+	padding-left: 7%;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+}
+
+li {
+	color: white;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+
+li img {
+	width: 70px;
+}
+
+.course{
+    
+    padding: 5% 15%;
+}
+.course h1{
+    margin-bottom: 20px;
+    font-family: "Baloo Bhai 2", cursive;
+}
+
+.course h5{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Bree Serif", serif;
+}
+.back_container{
+    display: flex;
+    justify-content: space-between;
+}
+.course h5 img{
+    width: 25px;
+}
+.course small{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.main-card_container{
+    margin-top: 20px;
+}
+.card_link{
+	text-decoration: none;
+	color: rgb(33, 37, 41);
+}
+.card img{
+    height: 130px;
+    padding: 8px;
+    border-radius: 15px;
+}
+.back_btn{
+    background: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    font-family: "Baloo Bhai 2", cursive;
+    
+}
+.course .user{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.course .user img{
+    width: 40px;
+    
+    
+}
+.back_btn:hover{
+    background: #333;
+    
+    
+}
+.card{
+  border-radius: 1rem;
+  position: static;
+  transition: 1s;
+  box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+  font-family: 'Lato', sans-serif;
+}
+.card:hover{
+  transform: scale(1.1);
+  color:rgb(33, 37, 41);
+  box-shadow: 2px 2px 2px #000;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+footer p{
+	margin-bottom: 0px;
+}
+
+.col-1{
+  width: 45%;
+ }
+ /* Responsive styles */
+@media (max-width: 768px) {
+   .course{
+    
+    padding: 5% 5%;
+    
+   }
+   
+
+.card:hover{
+  transform: scale(1.1);
+  
+}
+.main-card_container{
+    
+    padding: 0px 12px;
+}
+
+
+}
+
