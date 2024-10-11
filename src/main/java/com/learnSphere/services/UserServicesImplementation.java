@@ -66,6 +66,16 @@ public class UserServicesImplementation  implements UserService{
 		return u;
 	}
 
+	@Override
+	public boolean validate(String email, String password) {
+		// Validate user credentials
+		Users user = urepo.findByEmail(email);
+		if (user != null) {
+			// Implement secure password comparison here
+			return user.getPassword().equals(password); // Replace with secure password handling
+		}
+		return false; // User not found
+	}
 
-	
+
 }

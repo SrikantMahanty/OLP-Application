@@ -13,4 +13,7 @@ public interface UserService {
 	String getUserRole(String email);
 	//get user's name by providing email
 	Users getUser(String email);
+
+	// Validates user's credentials
+	boolean validate(String email, String password);  // Corrected method name
 }

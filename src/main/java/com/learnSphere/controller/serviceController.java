@@ -60,7 +60,7 @@ private ContactServices contactServices;
 	public String validate(@RequestParam("email") String email,@RequestParam("password") String password,RedirectAttributes res,Model model,HttpSession session) {
 		boolean val= us.vaildate(email, password);
 		Users user=us.getUser(email);
-		if (val==true) {
+		if (val) {
 			if(us.getUserRole(email).equals("Trainer")) {
 				model.addAttribute("success",user.getFirstName()+"!");
 				return "trainerHome";
